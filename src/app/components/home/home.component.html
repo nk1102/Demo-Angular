@@ -1,2 +1,17 @@
+<form action="#" >
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" #nameInput>
+  </div>
+  <div>
+    <label for="reg">Register Number</label>
+    <input type="text" id="reg" #regInput required>
+  </div>
+  <div>
+    <label for="age">Age</label>
+    <input type="text" id="age" #ageInput required>
+  </div>
+  <button (click)="addNewStudent(nameInput.value, regInput.value, ageInput.value); $event.preventDefault()">Submit</button>
+</form>
 
-<h1> {{mystring}}</h1> 
+<p>{{ studentDetails }}</p>

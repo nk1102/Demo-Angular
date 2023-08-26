@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-    mystring : string  = "Welcome Home ";
+  studentDetails: string = '';
+
+  addNewStudent(name: string, reg: string, age: string) {
+    this.studentDetails = `${name}-${reg}-${age}`;
+    
+  }
 
 }
