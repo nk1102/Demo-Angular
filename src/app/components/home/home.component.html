@@ -1,35 +1,35 @@
-<!-- home.component.html -->
+<div class="container">
+  <h1>WeHost Login Page</h1>
 
-<div *ngIf="!editing">
-    <table>
-      <tr>
-        <td id="td1">{{ name }}</td>
-        <td id="td2">{{ mail }}</td>
-        <td id="td3">{{ contact }}</td>
-      </tr>
-    </table>
-  
-    <button type="submit" id="save" (click)="onEdit()" class="btn btn-primary">Edit Profile</button>
+  <!-- Toggle between login and signup forms -->
+  <div *ngIf="showLogin; else signupForm">
+    <form>
+      <label for="userName">Username:</label>
+      <input type="text" id="userName" name="userName" />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+
+      <button>Login</button>
+      <button (click)="showLogin = false">Sign Up</button>
+    </form>
   </div>
-  
-  <div *ngIf="editing">
-    <table >
-      <td  id="td1">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" [(ngModel)]="name" class="form-control">
-      </td>
-      
-      <td  id="td2">
-        <label for="mail">Mail Id</label>
-        <input type="email" id="mail" name="mail" [(ngModel)]="mail" class="form-control">
-      </td>
-      
-      <td  id="td3">
-        <label for="contact">Contact Number</label>
-        <input type="tel" id="contact" name="contact" [(ngModel)]="contact" class="form-control">
-      </td>
-      
-      <button (click) = "onSave()" type="submit" id="edit" class="btn btn-primary">Save Profile</button>
-    </table>
-  </div>
-  
+  <ng-template #signupForm>
+    <form>
+      <label for="emailId">Email:</label>
+      <input type="text" id="emailId" name="emailId" />
+
+      <label for="contact">Contact:</label>
+      <input type="text" id="contact" name="contact" />
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" name="pass" />
+
+      <button>Sign Up</button>
+      <button (click)="showLogin = true">Back to Login</button>
+    </form>
+  </ng-template>
+</div>
