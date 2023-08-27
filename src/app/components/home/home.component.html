@@ -13,7 +13,7 @@
   </div>
   
   <div *ngIf="editing">
-    <table (ngSubmit)="onSave()">
+    <table >
       <td class="form-group" id="td1">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" [(ngModel)]="name" class="form-control">
@@ -29,7 +29,7 @@
         <input type="tel" id="contact" name="contact" [(ngModel)]="contact" class="form-control">
       </td>
       
-      <button type="submit" id="edit" class="btn btn-primary">Save Profile</button>
+      <button (click) = "onSave()" type="submit" id="edit" class="btn btn-primary">Save Profile</button>
     </table>
   </div>
   

@@ -16,11 +16,11 @@ export class HomeComponent {
 
   onEdit() {
     this.editing = true;
-  }
+  };
 
   onSave() {
     this.editing = false;
-  }
+  };
 
 
 
