@@ -14,6 +14,8 @@ export class HomeComponent {
   { name: 'Jane Smith', registerNumber: '67890', age: 17 }
   
 ];
-
+deleteStudent(index: number) {
+  this.student.splice(index, 1);
+}
 
 }

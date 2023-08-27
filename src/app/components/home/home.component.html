@@ -7,10 +7,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let student1 of student">
-      <td>{{ student1.name }}</td>
-      <td>{{ student1.registerNumber }}</td>
-      <td>{{ student1.age }}</td>
+    <tr *ngFor="let student of student ; let i = index" (click)="deleteStudent(i)">
+      <td>{{ student.name }}</td>
+      <td>{{ student.registerNumber }}</td>
+      <td>{{ student.age }}</td>
     </tr>
   </tbody>
 </table>
