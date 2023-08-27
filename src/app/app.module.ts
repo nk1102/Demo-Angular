@@ -7,15 +7,18 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './component/contact/contact.component';
 
 
+
 @NgModule({
   declarations: [
+    
     AppComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+ 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
