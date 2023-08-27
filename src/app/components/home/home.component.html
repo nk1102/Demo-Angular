@@ -1,35 +1,16 @@
-<div class="container">
-  <h1>WeHost Login Page</h1>
-
-  <!-- Toggle between login and signup forms -->
-  <div *ngIf="showLogin; else signupForm">
-    <form>
-      <label for="userName">Username:</label>
-      <input type="text" id="userName" name="userName" />
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" />
-
-      <button>Login</button>
-      <button (click)="showLogin = false">Sign Up</button>
-    </form>
-  </div>
-  <ng-template #signupForm>
-    <form>
-      <label for="emailId">Email:</label>
-      <input type="text" id="emailId" name="emailId" />
-
-      <label for="contact">Contact:</label>
-      <input type="text" id="contact" name="contact" />
-
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" />
-
-      <label for="pass">Password:</label>
-      <input type="password" id="pass" name="pass" />
-
-      <button>Sign Up</button>
-      <button (click)="showLogin = true">Back to Login</button>
-    </form>
-  </ng-template>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Register Number</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student1 of student">
+      <td>{{ student1.name }}</td>
+      <td>{{ student1.registerNumber }}</td>
+      <td>{{ student1.age }}</td>
+    </tr>
+  </tbody>
+</table>
