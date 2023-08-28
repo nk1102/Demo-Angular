@@ -9,13 +9,9 @@ import { Student } from './Student.model';
 })
 export class HomeComponent {
 
-  student: any[] = [  // Assuming each student is an object with properties name, registerNumber, and age
-  { name: 'John Doe', registerNumber: '12345', age: 18 },
-  { name: 'Jane Smith', registerNumber: '67890', age: 17 }
-  
-];
-deleteStudent(index: number) {
-  this.student.splice(index, 1);
-}
+  students: Student[] = [];
 
+  onStudentAdded(student: Student) {
+    this.students.push(student);
+  }
 }

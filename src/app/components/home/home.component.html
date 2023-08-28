@@ -7,10 +7,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let student of student ; let i = index" (click)="deleteStudent(i)">
+    <tr *ngFor="let student of students">
       <td>{{ student.name }}</td>
       <td>{{ student.registerNumber }}</td>
       <td>{{ student.age }}</td>
     </tr>
   </tbody>
 </table>
+
+<app-add-student (studentAdded)="onStudentAdded($event)"></app-add-student>

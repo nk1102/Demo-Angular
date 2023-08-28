@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { AddStudentComponent } from './add-student/add-student.component';
 
 
 
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     ContactComponent,
+    AddStudentComponent,
    
  
   ],
