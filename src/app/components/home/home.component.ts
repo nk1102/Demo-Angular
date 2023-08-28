@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Student } from './Student.model';
+import { Student } from 'src/app/Student.model';
+
 
 @Component({
   selector: 'app-home',
